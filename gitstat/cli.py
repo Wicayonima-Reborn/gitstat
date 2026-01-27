@@ -15,4 +15,7 @@ def parse_args():
 
     parser.add_argument("--json", action="store_true", help="Output JSON")
 
+    parser.add_argument("--version", action="store_true", help="Show version and exit")
+    parser.add_argument("--quiet", action="store_true", help="Minimal output for scripting")
+
     return parser.parse_args()
