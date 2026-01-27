@@ -1,0 +1,19 @@
+#!/usr/bin/env python3
+
+from gitstat.cli import parse_args
+from gitstat.gitlog import fetch_commits
+from gitstat.analyze import analyze_commits
+from gitstat.output import print_human, print_json
+
+def main():
+    args = parse_args()
+    lines = fetch_commits(args)
+    result = analyze_commits(lines)
+
+    if args.json:
+        print_json(result)
+    else:
+        print_human(result, args)
+
+if __name__ == "__main__":
+    main()
