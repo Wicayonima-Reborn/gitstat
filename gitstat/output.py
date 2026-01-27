@@ -23,13 +23,18 @@ def print_human(result, args):
         print("\nTop commit messages:")
         for msg, count in result["top_messages"].most_common(args.limit):
             print(f"  ({count}) {msg}")
-
+    
+    if getattr(args, "busiest_hour", False):
+        hour, count = result["per_hour"].most_common(1)[0]
+        print(f"\nBusiest hour:\n  {hour}:00 - {count} commits")
 
 def print_quiet(result):
     print(f"total={result['total']}")
     for k, v in result["per_type"].most_common():
         print(f"{k}={v}")
-
+    if "per_hour" in result:
+        hour, count = result["per_hour"].most_common(1)[0]
+        print(f"busiest_hour={hour}")
 
 def print_json(result):
     print(json.dumps(result, indent=2, default=int))

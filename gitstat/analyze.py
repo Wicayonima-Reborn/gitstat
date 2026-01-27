@@ -20,15 +20,16 @@ def analyze_commits(lines):
     per_day = Counter()
     per_author = Counter()
     per_type = Counter()
+    per_hour = Counter()
     messages = Counter()
-
     empty_messages = 0
 
     for line in lines:
-        author, date, message = line.split("|", 2)
+        author, date, hour, message = line.split("|", 3)
 
         per_day[date] += 1
         per_author[author] += 1
+        per_hour[hour] += 1
         per_type[classify_message(message)] += 1
 
         clean_msg = message.strip()
@@ -42,6 +43,7 @@ def analyze_commits(lines):
         "per_day": per_day,
         "per_author": per_author,
         "per_type": per_type,
+        "per_hour": per_hour,
         "top_messages": messages,
         "empty_messages": empty_messages,
     }

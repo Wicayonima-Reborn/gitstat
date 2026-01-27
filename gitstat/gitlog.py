@@ -7,8 +7,8 @@ class NotGitRepoError(Exception):
 def fetch_commits(args):
     cmd = [
         "git", "log",
-        "--pretty=format:%an|%ad|%s",
-        "--date=short"
+        "--pretty=format:%an|%ad|%H|%s",
+        "--date=format:%Y-%m-%d"
     ]
 
     if args.since:

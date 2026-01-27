@@ -18,4 +18,6 @@ def parse_args():
     parser.add_argument("--version", action="store_true", help="Show version and exit")
     parser.add_argument("--quiet", action="store_true", help="Minimal output for scripting")
 
+    parser.add_argument("--busiest-hour", action="store_true", help="Show busiest commit hour")
+
     return parser.parse_args()
