@@ -20,4 +20,4 @@ def fetch_commits(args):
     if result.returncode != 0:
         sys.exit("Error: not a git repository")
 
-    return result.stdout.splitlines()
+    return result.stdout.splitlines()   
