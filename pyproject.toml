@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "git-stat-cli"
+version = "0.1.0"
+description = "Simple git commit statistics CLI tool"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+  {name = "Your Name"}
+]
+
+[project.scripts]
+git-stat = "gitstat.__main__:main"
