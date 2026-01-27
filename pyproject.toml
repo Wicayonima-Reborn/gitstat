@@ -3,7 +3,7 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "git-stat-cli"
+name = "gitstat"
 version = "0.1.1"
 description = "Simple git commit statistics CLI tool"
 readme = "README.md"
