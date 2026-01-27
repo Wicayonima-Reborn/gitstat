@@ -13,7 +13,7 @@ Simple CLI tool to analyze git commit statistics.
 ## Installation
 
 ```bash
-pip install git-stat-cli
+pip install gitstat
 ```
 
 ## Usage
