@@ -163,8 +163,9 @@ The tool intentionally avoids complex visualization and long-running background 
 
 ## License
 
-MIT License[LICENSE]
+MIT [LICENSE](LICENSE)
 
 ## Contributing
 
 Issues and pull requests are welcome. Keep changes small, focused, and consistent with the existing CLI behavior.
+
