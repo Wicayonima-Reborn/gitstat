@@ -5,7 +5,7 @@ from gitstat.cli import parse_args
 from gitstat.gitlog import fetch_commits, NotGitRepoError
 from gitstat.analyze import analyze_commits
 from gitstat.output import print_human, print_json, print_quiet
-
+from gitstat.colors import style, RED
 
 def main():
     args = parse_args()
@@ -17,7 +17,7 @@ def main():
     try:
         lines = fetch_commits(args)
     except NotGitRepoError as e:
-        print(str(e))
+        print(style(str(e), RED, bold=True))
         sys.exit(1)
 
     if not lines:
@@ -32,7 +32,6 @@ def main():
         print_json(result)
     else:
         print_human(result, args)
-
 
 if __name__ == "__main__":
     main()
