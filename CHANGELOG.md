@@ -6,7 +6,17 @@ This project follows a pragmatic versioning approach during early development (0
 
 ---
 
-## [0.1.3] – Upcoming
+## [0.1.3]
+
+### Added
+
+* Author matching modes via `--author-mode` with support for `contains` (default), `exact`, and `regex`.
+* Friendly CLI typo suggestions for mistyped flags (e.g. `--hep` → `--help`).
+
+### Improved
+
+* Overall CLI usability and error feedback.
+* Reduced ambiguity when filtering commits by author name.
 
 ### Added
 
